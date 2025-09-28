@@ -22,10 +22,12 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          hover: "hsl(var(--secondary-hover))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -38,6 +40,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          hover: "hsl(var(--accent-hover))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -47,6 +50,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Cultural Design System
+        "warm-beige": "hsl(var(--warm-beige))",
+        "terracotta": "hsl(var(--terracotta))",
+        "deep-green": "hsl(var(--deep-green))",
+        "cream": "hsl(var(--cream))",
+        "earth-brown": "hsl(var(--earth-brown))",
+        "golden-sand": "hsl(var(--golden-sand))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +67,30 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-warm": "var(--gradient-warm)",
+        "gradient-cultural": "var(--gradient-cultural)",
+      },
+      boxShadow: {
+        "soft": "var(--shadow-soft)",
+        "cultural": "var(--shadow-cultural)",
+        "warm": "var(--shadow-warm)",
+      },
+      fontSize: {
+        "hero": "var(--font-size-hero)",
+        "heading": "var(--font-size-heading)",
+        "subheading": "var(--font-size-subheading)",
+        "body": "var(--font-size-body)",
+        "caption": "var(--font-size-caption)",
+      },
+      spacing: {
+        "section": "var(--spacing-section)",
+        "component": "var(--spacing-component)",
+      },
+      maxWidth: {
+        "container": "var(--max-width)",
       },
       borderRadius: {
         lg: "var(--radius)",
