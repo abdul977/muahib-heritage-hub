@@ -48,7 +48,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="cultural" size="sm">
+            <Button variant="cultural" size="sm" onClick={() => scrollToSection('#contact')}>
               Get Tickets
             </Button>
           </div>
@@ -77,7 +77,7 @@ const Header = () => {
                 </button>
               ))}
               <div className="pt-4 border-t border-border">
-                <Button variant="cultural" size="sm" className="w-full">
+                <Button variant="cultural" size="sm" className="w-full" onClick={() => scrollToSection('#contact')}>
                   Get Tickets
                 </Button>
               </div>

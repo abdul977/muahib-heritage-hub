@@ -47,7 +47,10 @@ const Hero = () => {
               Explore Events
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
-            <Button variant="vendor" size="lg">
+            <Button variant="vendor" size="lg" onClick={() => {
+              const el = document.querySelector('#contact');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}>
               Become a Vendor
             </Button>
           </div>

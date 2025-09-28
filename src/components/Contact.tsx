@@ -18,15 +18,28 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const message = formData.message.trim();
+
+    if (!name || !email || !message) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Build WhatsApp URL
+    const phone = "2349025794407"; // 09025794407 in international format
+    const text = `Hello Muahib Food!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+
     toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours.",
+      title: "Opening WhatsApp...",
+      description: "You'll be redirected to send your message.",
     });
-    
+
     setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
   };
@@ -148,7 +161,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">+234 (0) 123 456 7890</p>
+                    <p className="text-muted-foreground">+234 902 579 4407</p>
                   </div>
                 </div>
 
@@ -209,7 +222,10 @@ const Contact = () => {
                 Join us at our next event and discover the rich flavors 
                 and traditions of African culinary heritage.
               </p>
-              <Button variant="vendor" size="lg" className="w-full sm:w-auto">
+              <Button variant="vendor" size="lg" className="w-full sm:w-auto" onClick={() => {
+                const url = `https://wa.me/2349025794407?text=${encodeURIComponent('Hello Muahib Food! I would like to get tickets.')}`;
+                window.open(url, '_blank');
+              }}>
                 Get Event Tickets
               </Button>
             </div>
